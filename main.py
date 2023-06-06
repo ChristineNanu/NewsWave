@@ -2,10 +2,10 @@ from models import User, News, Category, Subscription, Journalist
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Optional, List
-from sqlalchemy.orm import Session
+from models import Session
 
-app = FastAPI()
 db_session = Session()
+app = FastAPI()
 
 class UserSchema(BaseModel):
     id: int
@@ -65,25 +65,25 @@ class UpdateCategorySchema(BaseModel):
 def hello():
     return "Hello"
 
-@app.post('/add_user/{id}')
+@app.post('/add_user')
 def post_user(user: UserSchema) -> UserSchema:
     new_user = User(**dict(user))
     db_session.add(new_user)
     db_session.commit()
     return user
 
-@app.get('/news', response_model=List[NewsSchema])
-def get_news() -> List[NewsSchema]:
+@app.get('/news')
+def get_news():
     news = db_session.query(News).all()
     return news
 
 @app.get('/all_categories')
-def get_all_categories() -> CategorySchema:
+def get_all_categories():
     categories = db_session.query(Category).all()
     return categories
 
 @app.get('/categories')
-def get_categories_according_to_type() -> CategorySchema:
+def get_categories_according_to_type(type: str):
     categories = db_session.query(Category).filter_by(type=type)
     return categories
 
@@ -117,18 +117,18 @@ def post_user(sub: SubscriptionSchema) -> SubscriptionSchema:
     return sub
 
 @app.post('/add_journalist/{id}')
-def post_user(journalist: JournalistSchema) -> JournalistSchema:
+def post_journalist(journalist: JournalistSchema) -> JournalistSchema:
     new_journalist = Journalist(**dict(journalist))
     db_session.add(new_journalist)
     db_session.commit()
     return journalist
 
-@app.get('/journalist', response_model=List[NewsSchema])
-def get_all_journalists()->List[Journalist]:
+@app.get('/all_journalists')
+def get_all_journalists()-> List[JournalistSchema]:
    journalists = db_session.query(Journalist).all()
    return journalists
 
-@app.get('/journalist', response_model=List[NewsSchema])
-def get_journalist()->List[Journalist]:
+@app.get('/journalist/{id}')
+def get_journalist(id: int):
    journalist = db_session.query(Journalist).filter_by(id=id).first()
    return journalist
