@@ -8,6 +8,7 @@ sqlalchemy = "*"
 fastapi = "*"
 uvicorn = "*"
 alembic = "*"
+faker = "*"
 
 [dev-packages]
 
