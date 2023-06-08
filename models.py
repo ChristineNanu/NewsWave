@@ -61,6 +61,7 @@ class Subscription(Base):
     type = Column(String())
     payment_method = Column(String())
     user_id = Column(Integer, ForeignKey('users.id'))
+    status = Column(String(), nullable=False) 
 
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
