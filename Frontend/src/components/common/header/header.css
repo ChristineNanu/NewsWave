@@ -1,17 +1,13 @@
 .head {
     cursor: pointer;
   }
-  .head .logo img {
-    width: 100px;
-    display: block;
-    margin: 0 auto;
-    border: none;
-  }
+  
   .heading {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Adjust the height as needed */
+    height: 250vh; /* Adjust the height as needed */
+    width: 400%;
   }
   
   header {

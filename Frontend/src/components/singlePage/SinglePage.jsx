@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { hero } from "../../dummyData"
-import Side from "../home/sideContent/side/Side"
+// import Side from "../home/sideContent/side/Side"
 import "../home/mainContent/homes/style.css"
 import "./singlepage.css"
-import "../home/sideContent/side/side.css"
+// import "../home/sideContent/side/side.css"
 import SinglePageSlider from "./slider/SinglepageSlider"
 
 const SinglePage = () => {
@@ -97,7 +97,7 @@ const SinglePage = () => {
               </div>
             </section>
             <section className='sideContent'>
-              <Side />
+              {/* <Side /> */}
             </section>
           </div>
         </main>

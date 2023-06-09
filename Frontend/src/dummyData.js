@@ -1,9 +1,9 @@
 export const hero = [
     {
       id: 1,
-      cover: "../images/hero/hero1.jpg",
-      catgeory: "featured",
-      title: "Google To Boost Android Security In Few Days",
+      cover: "../images/hero/Hero.jpeg",
+      catgeory: "Politics",
+      title: "Good alone another government analysis. Start stop member resource benefit yeah.",
       authorName: "Salman",
       authorImg: "../images/author.jpg",
       time: "5 Jun - 2022",
@@ -36,7 +36,7 @@ export const hero = [
     },
     {
       id: 2,
-      cover: "../images/hero/hero2.jpg",
+      cover: "../images/hero/hero5.jpeg",
       catgeory: "sport",
       title: "More than billion football fans attend Brazil world cup",
       authorName: "alex",
@@ -188,12 +188,12 @@ export const hero = [
   export const popular = [
     {
       id: 1,
-      category: "world",
-      title: "Our Favorite Photos From All Around",
+      category: "Mary Humphrey",
+      title: "Good alone another government analysis. Start stop member resource benefit yeah.",
+      type:"adult",
       date: "19. February 2022",
-      comments: 0,
+      comments: 69,
       cover: "../images/popular/pop1.jpg",
-      desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.",
     },
     {
       id: 2,
